@@ -66,7 +66,7 @@ bool initGLFW() {
 	}
 
 	//Create a new GLFW window
-	window = glfwCreateWindow(800, 800, "INFR1350U", nullptr, nullptr);
+	window = glfwCreateWindow(800, 800, "Gimpel_Aiden_100740094", nullptr, nullptr);
 	glfwMakeContextCurrent(window);
 
 	glfwSetWindowSizeCallback(window, GlfwWindowResizedCallback);
@@ -141,8 +141,8 @@ int main() {
 		//    X     Y     Z      R     G     B
 			0.5f, -0.5f, 0.5f,  0.0f, 0.0f, 0.0f,
 			0.5f,  0.5f, 0.5f,  0.3f, 0.2f, 0.5f,
-			-0.5f,  0.5f, 0.5f,  1.0f, 1.0f, 0.0f,
-			0.5f,  1.0f, 0.5f,  1.0f, 1.0f, 1.0f
+			-0.5f,  0.5f, 0.5f,  1.0f, 0.0f, 0.0f,
+			0.5f,  0.5f, 0.5f,  0.5f, 0.2f, 0.0f
 	};
 
 	VertexBuffer* interleaved_vbo = new VertexBuffer();
@@ -184,7 +184,7 @@ int main() {
 
 	Shader* shader2 = new Shader();
 	shader2->LoadShaderPartFromFile("shaders/vertex_shader.glsl", GL_VERTEX_SHADER);
-	shader2->LoadShaderPartFromFile("shaders/frag_shader.glsl", GL_FRAGMENT_SHADER);
+	shader2->LoadShaderPartFromFile("shaders/frag_shader2.glsl", GL_FRAGMENT_SHADER);
 	shader2->Link();
 
 	/*if (!loadShaders())
