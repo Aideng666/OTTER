@@ -18,6 +18,10 @@ public:
 	Camera();
 	virtual ~Camera() = default;
 
+	//Bool for switching between camera types
+	bool isOrtho = false;
+
+
 	/// <summary>
 	/// Sets this camera's position in world space
 	/// </summary>
@@ -78,11 +82,21 @@ public:
 	/// </summary>
 	const glm::mat4& GetViewProjection() const;
 
+	bool GetIsOrtho();
+
+	void SetIsOrtho(bool ortho);
+
+
 protected:
 	float _nearPlane;
 	float _farPlane;
+	float _left;
+	float _right;
+	float _top;
+	float _bottom;
 	float _fovRadians;
 	float _aspectRatio;
+
 
 	glm::vec3 _position;
 	glm::vec3 _normal;
